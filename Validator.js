@@ -88,6 +88,7 @@ Validator.validate = function(arr) {
     }   
  
     if ('isInt' in arr[param].rules)   {
+    //  integerRegex = /^\-?[0-9]+$/    
       if (typeof(arr[param].value) !== 'number') {
         answ[param] ={validation: false, msg:"Значение должно быть числом",};
       } 
