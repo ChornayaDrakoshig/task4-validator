@@ -97,15 +97,3 @@ Validator.validate = function(arr) {
     
   return answ;
 };
-/*
-var valid = new Validator('r').isRequired();
-var valid2 = new Validator(12).max(100).isInt();
-var valid3 = new Validator('ffd@gmail.com').isEmail();    
-
-answer = Validator.validate({name: valid, age: valid2, email: valid3});
-console.log(answer.name.validation);
-console.log(answer.name.msg);
-console.log(answer.age.validation);
-console.log(answer.email.validation);    
-console.log(answer.email.msg);
-*/
