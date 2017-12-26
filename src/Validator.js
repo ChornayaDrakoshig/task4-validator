@@ -40,9 +40,9 @@ Validator.prototype.min = function(length) {
 };
 
 Validator.prototype.isEmail = function() {
-  var r = /^[\w\.\d-_]+@[\w\.\d-_]+\.\w{2,4}$/i;
   this.rules.push(function(value){
-    return (value.match(r)) 
+    var r = /^[\w\.-]+@[\w\.-]+\.\w{2,4}$/i;  
+    return (value.search(r) !== -1) 
   });
   return this;  
 };

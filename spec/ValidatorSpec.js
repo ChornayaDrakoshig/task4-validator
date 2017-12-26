@@ -96,7 +96,7 @@ describe("Validator", function () {
     
   describe("when checking isEmail()", function () {
     it("should indicate that email is valid", function () {
-      var email = 'wolfstar78@gmail.com';
+      var email = 'wolf-star_78@gmail.com';
       var valid = new Validator(email).isEmail();
       var answer = valid.isValid();
       expect(answer).toBe(true);

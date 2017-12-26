@@ -39,7 +39,7 @@ Rule.prototype.min = function(length) {
 
 Rule.prototype.isEmail = function() {
   this.rules.push(function(value){
-    var r = /^[\w\.\d-_]+@[\w\.\d-_]+\.\w{2,4}$/i;  
+    var r = /^[\w\.-]+@[\w\.-]+\.\w{2,4}$/i;  
     return (value.search(r) !== -1) 
   });
   return this;  
