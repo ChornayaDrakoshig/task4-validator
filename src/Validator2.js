@@ -57,7 +57,9 @@ function Validator(){
     var answ={};
      
     for (var param in values) {    
-      answ[param] = true;    
+      answ[param] = true; 
+      var i;    
+        
       for (i=0; i<rules[param].rules.length; i++) {  
         var answer = rules[param].rules[i](values[param]); 
         if (!answer) answ[param] = false;    

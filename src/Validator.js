@@ -4,7 +4,6 @@ function Validator(value){
 }
 
 Validator.prototype.isRequired = function() {
- // this.rules.isRequired = true;
   this.rules.push(function(value){
     return !(value === undefined || value === null || value === '') 
   });    
@@ -56,7 +55,8 @@ Validator.prototype.isInt = function() {
 
 Validator.prototype.isValid = function() {
   var answ = true;
-  
+  var i;    
+    
   for (i = 0; i < this.rules.length; i++) {
     var answer = this.rules[i](this.value);
     if (!answer) answ = false;  
